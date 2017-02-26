@@ -40,12 +40,13 @@ AppAsset::register($this);
         $menuItems[] = ['label' => '登录', 'url' => ['/site/login']];
     } else {
         $menuItems[] = ['label' => '选手主页', 'url' => ['/site/index']];
-        $menuItems[] = ['label' => 'Post', 'url'=> ['/post/index']];
-        //$menuItems[] = ['label' => '选手列表', 'url'=> ['/user/index']];
+        $menuItems[] = ['label' => 'AI排行榜', 'url' => ['/ranking/index','sort'=>'-score']];
+        $menuItems[] = ['label' => '提交代码', 'url'=> ['/post/index']];
+        $menuItems[] = ['label' => '选手列表', 'url'=> ['/user/index']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                '切换账号 (' . Yii::$app->user->identity->username . ')',
+                '注销账号 (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
@@ -69,7 +70,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; ASTA <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

@@ -3,17 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Post;
-use common\models\PostSearch;
+use common\models\Ranking;
+use common\models\RankingSearch;
 use yii\web\Controller;
-use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PostController implements the CRUD actions for Post model.
+ * RankingController implements the CRUD actions for Ranking model.
  */
-class PostController extends Controller
+class RankingController extends Controller
 {
     /**
      * @inheritdoc
@@ -31,17 +30,12 @@ class PostController extends Controller
     }
 
     /**
-     * Lists all Post models.
+     * Lists all Ranking models.
      * @return mixed
      */
     public function actionIndex()
     {
-        if (Yii::$app->user->isGuest) {
-            throw new HttpException(400, '抱歉，您未能通过身份验证。请尝试重新登录。');
-        }        
-
-        $searchModel = new PostSearch();
-        $searchModel->author_id = Yii::$app->user->identity->id;
+        $searchModel = new RankingSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -51,7 +45,7 @@ class PostController extends Controller
     }
 
     /**
-     * Displays a single Post model.
+     * Displays a single Ranking model.
      * @param integer $id
      * @return mixed
      */
@@ -63,28 +57,14 @@ class PostController extends Controller
     }
 
     /**
-     * Creates a new Post model.
+     * Creates a new Ranking model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        if (Yii::$app->user->isGuest) {
-            throw new HttpException(400, '抱歉，您未能通过身份验证。请尝试重新登录。');
-        }        
+        $model = new Ranking();
 
-        $searchModel = new PostSearch();
-        $searchModel->author_id = Yii::$app->user->identity->id;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        if ($dataProvider->totalCount >= Yii::$app->params['MAX_CREATE_POST_COUNT']) {
-            throw new HttpException(400, '抱歉，您的提交数量已经达到上限。');
-        }
-
-        $model = new Post();
-        
-        $model->status = 0;
-        $model->author_id = Yii::$app->user->identity->id; 
- 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -95,7 +75,7 @@ class PostController extends Controller
     }
 
     /**
-     * Updates an existing Post model.
+     * Updates an existing Ranking model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -114,7 +94,7 @@ class PostController extends Controller
     }
 
     /**
-     * Deletes an existing Post model.
+     * Deletes an existing Ranking model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -127,15 +107,15 @@ class PostController extends Controller
     }
 
     /**
-     * Finds the Post model based on its primary key value.
+     * Finds the Ranking model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Post the loaded model
+     * @return Ranking the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Post::findOne($id)) !== null) {
+        if (($model = Ranking::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

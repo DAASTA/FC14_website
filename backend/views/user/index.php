@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = '选手列表';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
@@ -15,26 +15,37 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
+  <!--  <p>
         <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    </p> -->
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
-            // 'email:email',
+            //'id',
+            /*[ 'attribute' => 'id',
+              'label' => 'ID',
+              'contentOptions' => ['width'=>'30px'],
+            ],*/
+            //'username',
+            [ 'attribute' => 'username',
+              'label' => '用户名',
+            ],
+            //'auth_key',
+            //'password_hash',
+            //'password_reset_token',
+             'email:email',
             // 'status',
-            // 'created_at',
+            // 'created_at:datetime',
+            /*[ 'attribute' => 'created_at',
+              'label' => '创建时间',
+              'format' => ['date', 'php:Y-m-d H:i:s'],
+            ]*/
             // 'updated_at',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
 </div>

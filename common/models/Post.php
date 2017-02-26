@@ -15,6 +15,7 @@ use Yii;
  * @property integer $author_id
  *
  * @property User $author
+ * @property Poststatus $status0
  */
 class Post extends \yii\db\ActiveRecord
 {
@@ -32,12 +33,12 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'title', 'content', 'status', 'create_time', 'author_id'], 'required'],
-            [['id', 'status', 'create_time', 'author_id'], 'integer'],
+            [['title', 'content', 'status', 'author_id'], 'required'],
+            [['status', 'create_time', 'author_id'], 'integer'],
             [['content'], 'string'],
             [['title'], 'string', 'max' => 128],
-            [['author_id'], 'unique'],
             [['author_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['author_id' => 'id']],
+            [['status'], 'exist', 'skipOnError' => true, 'targetClass' => Poststatus::className(), 'targetAttribute' => ['status' => 'id']],
         ];
     }
 
@@ -47,12 +48,11 @@ class Post extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'status' => 'Status',
-            'create_time' => 'Create Time',
-            'author_id' => 'Author ID',
+    	    'title' => '标题',
+            'content' => '代码',
+            'status' => '状态',
+            'create_time' => '更新时间',
+            'author_id' => '作者',
         ];
     }
 
@@ -62,5 +62,26 @@ class Post extends \yii\db\ActiveRecord
     public function getAuthor()
     {
         return $this->hasOne(User::className(), ['id' => 'author_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getStatus0()
+    {
+        return $this->hasOne(Poststatus::className(), ['id' => 'status']);
+    }
+
+    // user configuration
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+            $this->create_time = time();
+            $this->status = 0;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }

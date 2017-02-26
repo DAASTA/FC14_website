@@ -12,6 +12,11 @@ use common\models\Post;
  */
 class PostSearch extends Post
 {
+    public function attributes()     
+    {
+        return array_merge(parent::attributes(), ['authorName']);
+    }   
+
     /**
      * @inheritdoc
      */
@@ -19,7 +24,7 @@ class PostSearch extends Post
     {
         return [
             [['id', 'status', 'create_time', 'author_id'], 'integer'],
-            [['title', 'content'], 'safe'],
+            [['title', 'content', 'authorName'], 'safe'],
         ];
     }
 
@@ -47,6 +52,8 @@ class PostSearch extends Post
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => ['pageSize'=>20],
+            'sort' => ['attributes'=>['id','title','status','create_time'],],
         ]);
 
         $this->load($params);
@@ -67,6 +74,9 @@ class PostSearch extends Post
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'content', $this->content]);
+
+        $query -> join('INNER JOIN', 'user', 'post.author_id = user.id');
+        $query -> andFilterWhere(['like', 'user.username', $this->authorName]);
 
         return $dataProvider;
     }
