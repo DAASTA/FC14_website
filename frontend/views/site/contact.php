@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-       遇到问题？您可以联系大赛工作人员，或填写以下表单反馈您的宝贵建议。谢谢！
+       遇到问题？您可以联系大赛工作人员，发送邮件到da_fc14@163.com，或填写以下表单反馈您的宝贵建议。谢谢！
     </p>
 
     <div class="row">
@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]) ?>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    <?= Html::submitButton('提交', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                 </div>
 
             <?php ActiveForm::end(); ?>

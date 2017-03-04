@@ -33,6 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 
-    <p> <?= Html::a('没有账号？点击这里注册', "http://student.au.tsinghua.edu.cn/advanced/frontend/web/index.php?r=site%2Fsignup") ?> </P>
+    <p> <?= Html::a('没有账号？点击这里注册', "http://student.au.tsinghua.edu.cn/advanced/frontend/web/site/signup") ?> </P>
 
 </div>

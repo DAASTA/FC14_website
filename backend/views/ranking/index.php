@@ -19,7 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Create Ranking', ['create'], ['class' => 'btn btn-success']) ?>
     </p>-->
     <p><?= Html::a('下载全部dll', "http://student.au.tsinghua.edu.cn/share/FC14/dll/compiled.zip", ["class"=>'btn btn-primary']) ?></p>    
-    <p> 您可以在此查看热身赛得分，并下载任何编译过的ai文件。点击ID即可下载对应的dll文件。</p>
+    <p> 您可以在此查看热身赛得分，并下载任何编译过的ai文件。点击ID即可下载对应的vs2012release版本dll文件。</p>
+    <p> 如有必要，您可以联系工作人员索要gnuc版本的so文件。  </p>
     <p> 下一次热身赛将于2017.3.5进行。 </p>
 
     <?= GridView::widget([
