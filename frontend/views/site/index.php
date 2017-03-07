@@ -19,17 +19,19 @@ $this->title = '新生C语言大赛';
         
         <?php if (Yii::$app->user->isGuest): ?>
         <p class="lead">Freshmen-C 14，清华大学自动化系第14届新生C语言大赛</p>
-        <p><a class="btn btn-lg btn-success" href="http://student.au.tsinghua.edu.cn/advanced/frontend/web/site/signup">&nbsp;现在注册&nbsp;&raquo;&nbsp;</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://student.au.tsinghua.edu.cn/advanced/frontend/web/site/signup">&nbsp;现在报名&nbsp;&raquo;&nbsp;</a></p>
         <?php else: ?>
         <p class="lead">欢迎您，<?php echo Yii::$app->user->identity->username; ?>！</p>
         <?php endif; ?>
 
-        <p><a class="btn btn-lg btn-primary" href="http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php">&nbsp;开始开发&nbsp;&raquo;&nbsp;</a></p>
+        <p><a class="btn btn-lg btn-primary" href="http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php">&nbsp;进入游戏&nbsp;&raquo;&nbsp;</a></p>
         
        <p><img src="http://student.au.tsinghua.edu.cn/advanced/frontend/assets/logo.png" /></p>
 
                 <p><a class="btn btn-lg btn-default" href="https://github.com/hzsydy/XiangGuHuaJi/blob/master/readme.md#getting-started--快速了解百团大战">快速了解百团大战 &raquo;</a></p>
 <p class="lead">“<strong>百团大战</strong>”是清华大学一项盛大的<strong>社团</strong>宣传活动。也是第14届新生C的主题。</p>
+
+<p class="lead"> 新生C宣讲会将在周日3.12下午14:00，四教4101进行，不见不散！ </p>
 
     </div>
 

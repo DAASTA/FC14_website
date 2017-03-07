@@ -35,7 +35,7 @@ $this->title = '新生C语言大赛';
 
 <p><a class="btn btn-lg btn-default" href="https://github.com/hzsydy/XiangGuHuaJi#ai编写教程--完整规则">Ai编写教程 &raquo;</a></p>
 <blockquote>
-竞价出生，外交，活动举办，总部放置... 如何迎接百团大战的考验，成为一名合格的社长？ 请参考：
+竞价出生，外交，活动举办，总部放置... 如何迎接百团大战的考验，成为一名合格的社长？ 
 </blockquote>
 
 
