@@ -49,7 +49,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
     	    'title' => '标题',
-            'content' => '代码',
+            'content' => 'cpp代码',
             'status' => '状态',
             'create_time' => '更新时间',
             'author_id' => '作者',

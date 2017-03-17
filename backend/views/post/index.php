@@ -24,8 +24,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
     
     <?php if ($dataProvider->totalCount < Yii::$app->params['MAX_CREATE_POST_COUNT']  ): ?>
-    <p> 您可以修改现有代码，或创建新的AI。  </p>
-    <p> <?= Html::a('新建AI', ['create'], ['class' => 'btn btn-success']) ?> </p>
+    <p> 您可以修改现有代码，或提交新的AI。  </p>
+    <p> <?= Html::a('提交AI', ['create'], ['class' => 'btn btn-success']) ?> </p>
     <?php else: ?>
     <p> 您的提交数量已经达到上限。您可以清理或修改现有的代码。</p>
     <?php endif; ?>

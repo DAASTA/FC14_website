@@ -26,12 +26,20 @@ $this->title = '新生C语言大赛';
 
         <p><a class="btn btn-lg btn-primary" href="http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php">&nbsp;进入游戏&nbsp;&raquo;&nbsp;</a></p>
         
+                <p><a class="btn btn-lg btn-default" href="https://github.com/hzsydy/XiangGuHuaJi/blob/master/readme.md#getting-started--快速了解百团大战">快速了解百团大战 &raquo;</a></p>
        <p><img src="http://student.au.tsinghua.edu.cn/advanced/frontend/assets/logo.png" /></p>
 
-                <p><a class="btn btn-lg btn-default" href="https://github.com/hzsydy/XiangGuHuaJi/blob/master/readme.md#getting-started--快速了解百团大战">快速了解百团大战 &raquo;</a></p>
 <p class="lead">“<strong>百团大战</strong>”是清华大学一项盛大的<strong>社团</strong>宣传活动。也是第14届新生C的主题。</p>
 
-<p class="lead"> 新生C宣讲会将在周日3.12下午14:00，四教4101进行，不见不散！ </p>
+<hr>
+
+<p class="lead"> 现在扫码/长按进入<strong>选手交流群</strong>： </p>
+
+<p><img src="http://student.au.tsinghua.edu.cn/advanced/frontend/assets/user_qr_code.jpg" /></p>
+<hr>
+
+<p class="lead"> <strong>新生C宣讲会</strong>将在周日3.12下午14:00，四教4101进行，不见不散！ </p>
+
 
     </div>
 

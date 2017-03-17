@@ -10,8 +10,9 @@ $this->title = '新生C语言大赛';
         <h1>欢迎来到FC14选手页！</h1>
 
         <p class="lead">欢迎您，<?php echo Yii::$app->user->identity->username; ?>!</p>
-        <p> <a class="btn btn-success" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_user.zip" >下载选手工具包(VS2012)</a> </p>
+        <p> <a class="btn btn-success" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_user.zip" >下载选手工具包(VS)</a> </p>
         <p> <a class="btn btn-success" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_user_gnu.zip" >下载选手工具包(GNU)</a> </p>
+        <p> <a class="btn btn-primary" href="https://github.com/hzsydy/XiangGuHuaJi/blob/master/readme.md#选手入门手册" >快速入门手册 &raquo</a> </p>
         <!--<p> <a class="btn btn-primary" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_dev.zip" >下载扩展测试工具</a> </p>-->
         <!--<p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>-->
     </div>
@@ -45,9 +46,9 @@ $this->title = '新生C语言大赛';
 
 <p><a class="btn btn-lg btn-default" href="http://student.au.tsinghua.edu.cn/advanced/backend/web/ranking/index?sort=-score">Ai排行榜 &raquo;</a></p>
 <p>
-8名玩家同场竞技，一人单打完成大灭绝可不那么容易...<br> 
-疯狗ai屡屡受挫，只要约在桥头背靠背就能平分天下？...<br>
-选取冷门出生点，南方诸君如何攻克紫荆？...<br>
+8名玩家同场竞技，一人单打完成大灭绝可不那么容易<br> 
+黑恶势力闪亮登场！三人死守万人联合反击<br>
+选取冷门出生点，南方诸君如何攻克紫荆？<br>
 百团大战战报，敬请期待...
 </p>           
 

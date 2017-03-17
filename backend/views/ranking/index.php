@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p><?= Html::a('下载全部dll', "http://student.au.tsinghua.edu.cn/share/FC14/dll/compiled.zip", ["class"=>'btn btn-primary']) ?></p>    
     <p> 您可以在此查看热身赛得分、下载任何已编译的ai文件。点击ID即可下载对应的vs2012release版本dll文件。</p>
     <p> 如有必要，您可以联系工作人员，索要其他版本的动态链接库文件。  </p>
-    <p> 下一次热身赛将于2017.3.12进行。 </p>
+    <p> 热身赛排名在每天23:00更新。 </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -37,11 +37,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 return Html::a($data->post_id, "http://student.au.tsinghua.edu.cn/share/FC14/dll/".$data->post_id.".dll",[]);
               },
             ],
-            [ 'attribute' => 'score',
-              'label' => '得分',
-            ],
             [ 'label'=>'作者',
               'value' => 'post.author.username',
+            ],
+            [ 'attribute' => 'score',
+              'label' => '得分',
             ],
             [ 'label'=>'标题',
               'value'=> 'post.title',
