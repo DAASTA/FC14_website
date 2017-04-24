@@ -41,6 +41,7 @@ AppAsset::register($this);
     } else {
         $menuItems[] = ['label' => '选手主页', 'url' => ['/site/index']];
         $menuItems[] = ['label' => 'AI排行榜', 'url' => ['/ranking/index','sort'=>'-score']];
+        $menuItems[] = ['label' => '热身赛积分', 'url'=> ['/userranking/index', 'sort'=>'-score']];
         $menuItems[] = ['label' => '提交代码', 'url'=> ['/post/index']];
         $menuItems[] = ['label' => '选手列表', 'url'=> ['/user/index']];
         $menuItems[] = '<li>'

@@ -35,16 +35,16 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => '主页', 'url' => ['/site/index']],
+        ['label' => '欢迎页', 'url' => ['/site/index']],
         //['label' => '关于', 'url' => ['/site/about']],
-        ['label' => '反馈', 'url' => ['/site/contact']],
+        //['label' => '反馈', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => '现在报名', 'url' => ['/site/signup']];
         //$menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-        $menuItems[] = ['label' => '登录', 'url' => 'http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php'];
+        $menuItems[] = ['label' => '进入游戏', 'url' => 'http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php'];
     } else {
-        $menuItems[] = ['label' => '开始开发', 'url' => 'http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php'];
+        $menuItems[] = ['label' => '进入游戏', 'url' => 'http://student.au.tsinghua.edu.cn/advanced/backend/web/index.php'];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

@@ -10,8 +10,9 @@ $this->title = '新生C语言大赛';
         <h1>欢迎来到FC14选手页！</h1>
 
         <p class="lead">欢迎您，<?php echo Yii::$app->user->identity->username; ?>!</p>
-        <p> <a class="btn btn-success" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_user.zip" >下载选手工具包(VS)</a> </p>
-        <p> <a class="btn btn-success" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_user_gnu.zip" >下载选手工具包(GNU)</a> </p>
+        <p> VS工具包 toolbox 2017.3.24 更新：平衡性调整：背刺buff / 工具包加入瑞士轮工具 </p>
+
+        <p> <a class="btn btn-success" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_user.zip" >下载选手工具包(VS)</a> </p> 
         <p> <a class="btn btn-primary" href="https://github.com/hzsydy/XiangGuHuaJi/blob/master/readme.md#选手入门手册" >快速入门手册 &raquo</a> </p>
         <!--<p> <a class="btn btn-primary" href="http://student.au.tsinghua.edu.cn/share/FC14/FC14_toolbox_dev.zip" >下载扩展测试工具</a> </p>-->
         <!--<p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>-->
@@ -26,7 +27,7 @@ $this->title = '新生C语言大赛';
 <p><a class="btn btn-lg btn-default" href="https://github.com/hzsydy/XiangGuHuaJi#赛程">查看赛程 &raquo;</a></p>
 <blockquote>
 <p>
-在正式比赛前，将在网站上进行多次热身赛。初赛将于<strong>第六周</strong>周末进行，决赛计划于<strong>第十周</strong>进行。
+在正式比赛前，将在网站上进行多次热身赛，热身赛产生1/4的决赛名额。初赛将于<strong>第六周</strong>周末进行，确定决赛名单。决赛计划于<strong>第十周</strong>进行。
 </p>
 </blockquote>
 
